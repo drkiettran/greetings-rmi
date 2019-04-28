@@ -19,7 +19,8 @@ public class GreetingsServer extends UnicastRemoteObject implements GreetingsInt
     @Override
     public String hello(String name) throws RemoteException, UnknownHostException {
         String greetings = new Greetings().hello(name);
-        LOGGER.info("Returning {}", greetings);
+        LOGGER.info("Receiving call with name {}", name);
+        LOGGER.info("Returning greetings with {}", greetings);
         return greetings;
     }
     

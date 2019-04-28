@@ -5,6 +5,7 @@ import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +29,7 @@ public class Main {
             look_up = (GreetingsInterface) Naming.lookup(args[1]);
             String name = String.format("%s from %s/%s", args[2], InetAddress.getLocalHost().getHostName(),
                     ManagementFactory.getRuntimeMXBean().getName());
-
+            LOGGER.info("Calling remote greetings with {}", name);
             LOGGER.info("Received {}", look_up.hello(name));
         } else if (args[0].equalsIgnoreCase("server")) {
             if (args.length < 2) {
