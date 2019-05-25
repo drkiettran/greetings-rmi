@@ -2,6 +2,12 @@
 
 Sample project using Java RMI messaging.
 
+## Build
+
+``` bash
+mvn clean package
+```
+
 ## Runs
 
 ### Run rmiregistry
