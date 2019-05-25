@@ -7,19 +7,23 @@ Sample project using Java RMI messaging.
 ### Run rmiregistry
 
 ```bash
-set CLASSPATH=%CLASSPATH%;target\\greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar
-start rmiregistry
+
+export CLASSPATH=$CLASSPATH:target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+rmiregistry
 
 ```
 
 ### Run Server
 
 ```bash
-java -jar target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar server //saintgoretti/GreetingsServer
+java -jar target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar server //student-VirtualBox/GreetingsServer
 ```
 
 ### Run Client
 
 ```bash
-java -jar target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar client //saintgoretti/GreetingsServer "Johnny B Good"
+
+java -jar target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar client //student-VirtualBox/GreetingsServer "Johnny B Good"
+
 ```
