@@ -7,11 +7,11 @@ import java.rmi.server.UnicastRemoteObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class GreetingsServer extends UnicastRemoteObject implements GreetingsInterface {
-    private static final Logger LOGGER = LoggerFactory.getLogger(GreetingsServer.class);
+public class GreetingImpl extends UnicastRemoteObject implements Greeting {
+    private static final Logger LOGGER = LoggerFactory.getLogger(GreetingImpl.class);
     private static final long serialVersionUID = 3471960281840894899L;
 
-    public GreetingsServer() throws RemoteException {
+    public GreetingImpl() throws RemoteException {
         super();
         LOGGER.info("Constructing ...");
     }
