@@ -12,6 +12,8 @@ mvn clean package
 ```
 
 ## Runs
+To run this program, three terminals are needed. Go to the project folder where
+the project is built.
 
 ### Run rmiregistry
 Go to the folder of the project. Run the following comamnds:
@@ -39,6 +41,6 @@ java -cp target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar edu.harrisb
 
 ```bash
 
-java -cp target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar edu.harrisburgu.cisc525.app.Main client //student-VirtualBox/GreetingsServer "Johnny B Good"
+java -cp target/greetings-rmi-1.0-SNAPSHOT-jar-with-dependencies.jar edu.harrisburgu.cisc525.app.Main client //student-VirtualBox/GreetingServer "Johnny B Good"
 
 ```
